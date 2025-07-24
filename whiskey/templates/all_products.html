@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="{% url 'create' %}">Створити продукт</a>
+        {% for i in products  %}     
+            <h1>{{i.name}}</h1>
+            <h4>{{i.price}}</h4>
+            <h4>{{i.mocnist}}</h4>
+            <h5>{{i.description}}</h5>
+            <h5>{{i.release_data}}</h5>
+            <a href="{% url 'update' i.id %}">Оновити товар</a>
+            <a href="{% url 'product_details' i.id %}">Деталі про товар</a>
+            <a href="{% url 'delete' i.id %}">Видалити товар </a>
+        {% endfor %}
+</body>
+</html>

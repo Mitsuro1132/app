@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{%load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static "style/style.css" %}">
+</head>
+<body>
+    
+    <h1 class="ABC" >{{name}}</h1>
+    <h2>{{age}}</h2>
+    <h3>{{hobby}}</h3>
+    <a href="{%url 'last'%}">ГООООО </a>
+    <a href="{%url 'first'%}">next </a>
+
+    <img src="{%static 'images/warface.png '%}" alt="">
+
+
+
+</body>
+</html>
